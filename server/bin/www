@@ -13,7 +13,7 @@ var fs = require('fs');
 var path = require('path');
 
 
-var port = normalizePort('1818');
+var port = normalizePort('80');
 app.set('port', port);
 
 
