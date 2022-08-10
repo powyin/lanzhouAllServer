@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use("/map",express.static(path.resolve(__dirname, '../html')));
+app.use("/",express.static(path.resolve(__dirname, '../rt')));
 // console.log(path.resolve(__dirname, '../html'));
 
 app.use('/api', userRouter);
