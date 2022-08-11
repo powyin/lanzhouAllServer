@@ -8,12 +8,12 @@ var app = require('../app');
 var debug = require('debug')('sqlite-node-server:server');
 var http = require('http');
 
-var https = require('https');
+// var https = require('https');
 var fs = require('fs');
 var path = require('path');
 
 
-var port = normalizePort('443');
+var port = normalizePort('1818');
 app.set('port', port);
 
 
@@ -21,7 +21,7 @@ var options = {
   key: fs.readFileSync(path.join(__dirname,'./sccy.zjxc.gov.cn.key')),
   cert: fs.readFileSync(path.join(__dirname,'./sccy.zjxc.gov.cn.crt'))
 }
-var server = https.createServer(options, app);
+var server = http.createServer(app);
 
 
 
